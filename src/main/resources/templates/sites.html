@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorator="layouts/layout"
+      xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title>Layout</title>
+</head>
+
+<body>
+
+<div layout:fragment="content">
+
+    <h1>Sites page</h1>
+    Example of addition: https://naviny.by
+        <br/>
+        <a th:utext="#{message.add.site}"/>
+        <form action="#" th:action="@{/add}" th:object="${information}" method="POST">
+            <a th:utext="#{message.page}"/>
+            <input type="text" th:field="*{uri}" />
+            <br/>
+            <input type="submit" value="Add"/>
+        </form>
+        <br/>
+
+    <span th:if="${exc != null }"><h2 th:text="${exc}"/></span>
+    <a th:href="@{/}"><div th:utext="#{message.refresh}"/></a>
+    <br/>
+
+
+    <table border="1">
+        <tr>
+            <th> Site name </th>
+            <th> Option </th>
+        </tr>
+        <tr th:each="link : ${properties}">
+                <form action="#" th:action="@{/del}"  method="POST">
+            <td>
+                    <input type="hidden" th:name="delId" th:value="${link.getKey()}">
+                    <a th:href="${link.getValue()}">
+                        <h2 th:utext="${link.getKey()} +' '+ ${link.getValue()}"/>
+                    </a>
+            </td>
+            <td>
+                    <input type="submit" value="Remove"/>
+            </td>
+                </form>
+        </tr>
+    </table>
+
+</div>
+
+</body>
+</html>

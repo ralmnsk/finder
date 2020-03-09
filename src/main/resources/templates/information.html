@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorator="layouts/layout"
+      xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title>Information</title>
+</head>
+
+<body>
+
+<div layout:fragment="content">
+
+    <h1>Information page</h1>
+
+<!--    <a th:utext="#{message.page}"/>-->
+<!--    <a th:utext="${uri}" />-->
+<!--    <br/>-->
+
+<!--    <a th:utext="#{message.find}"/>-->
+<!--    <a th:utext="${infToFind}" />-->
+<!--    <br/>-->
+<!--    <h3><a th:href="@{/}">Main page</a></h3>-->
+    <table border="1">
+        <tr th:each="link : ${properties}">
+            <td><a th:href="${link.getValue()}"><h2 th:utext="${link.getKey()}"/></a></td>
+        </tr>
+    </table>
+</div>
+</body>
+</html>

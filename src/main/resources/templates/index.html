@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorator="layouts/layout"
+      xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title>Layout</title>
+</head>
+
+<body>
+
+<div layout:fragment="content">
+
+    <h1 id="main_page">Main page</h1>
+    <div>
+        Add/delete internet pages in the 'Sites manager' that will be used to find information.
+        Add/delete data in the 'Data manager'.
+        Then click Find button in 'Find information'.
+    </div>
+    <form action="#" th:action="@{/find}" th:object="${information}" method="POST">
+        <a th:utext="#{message.find}"/>
+<!--        <input type="text" th:field="*{infToFind}" />-->
+<!--        <br/>-->
+        <input type="submit" value="Find"/>
+    </form>
+    <br/>
+
+</div>
+
+</body>
+</html>

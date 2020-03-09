@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Header</title>
+</head>
+
+<body>
+
+<div th:fragment="sidebar">
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <span sec:authorize="isAuthenticated()" style="display: inline-block;">
+                    | Logged user: <span sec:authentication="name"></span> |
+                    Roles: <span sec:authentication="principal.authorities"></span> |
+                </span>
+        </div>
+        <div class="panel-body">
+            <div style="padding-bottom: 5px;">
+                <a th:href="@{/?lang=ru}">RU</a>
+                <a th:href="@{/?lang=en}">EN</a>
+            </div>
+
+            <div style="padding-bottom: 5px;">
+                <a th:href="@{/}">Find information</a>
+            </div>
+            <div style="padding-bottom: 5px;">
+                <a th:href="@{/sites}">Sites manager</a>
+            </div>
+            <div style="padding-bottom: 5px;">
+                <a th:href="@{/data}">Data manager</a>
+            </div>
+            <div style="padding-bottom: 5px;">
+                <a th:href="@{/logout}">Logout</a>
+            </div>
+        </div>
+    </div>
+
+<!--    <div class="panel panel-default">-->
+<!--        <div class="panel-heading">Navigation</div>-->
+<!--        <div class="panel-body">-->
+<!--            <div style="padding-bottom: 5px;">Panel 2 Content</div>-->
+<!--        </div>-->
+<!--    </div>-->
+</div>
+
+</body>
+
+</html>
