@@ -19,13 +19,13 @@
 	</properties>
 
 	<dependencies>
-		<dependency>
-			<groupId>xuggle</groupId>
-			<artifactId>xuggle-xuggler</artifactId>
-			<version>5.4</version>
-			<scope>system</scope>
-			<systemPath>${project.basedir}/src/main/resources/xuggle-xuggler-5.4.jar</systemPath>
-		</dependency>
+<!--		<dependency>-->
+<!--			<groupId>xuggle</groupId>-->
+<!--			<artifactId>xuggle-xuggler</artifactId>-->
+<!--			<version>5.4</version>-->
+<!--			<scope>system</scope>-->
+<!--			<systemPath>${project.basedir}/src/main/resources/xuggle-xuggler-5.4.jar</systemPath>-->
+<!--		</dependency>-->
 
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -102,10 +102,6 @@
 				<exclusion>
 					<groupId>org.junit.vintage</groupId>
 					<artifactId>junit-vintage-engine</artifactId>
-				</exclusion>
-				<exclusion>
-					<groupId>xuggle</groupId>
-					<artifactId>xuggle-xuggler</artifactId>
 				</exclusion>
 			</exclusions>
 		</dependency>
