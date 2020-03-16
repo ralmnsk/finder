@@ -27,7 +27,7 @@ public class NewsSender {
     private NewsReceiver newsReceiver;
 
 
-    @Scheduled(fixedRate = 60000)
+//    @Scheduled(fixedRate = 60000)
     public void sendNews(){
                 fileManagerUser.setFileProperties(USERS);
                 fileManagerNews.setFileProperties(NEWS);

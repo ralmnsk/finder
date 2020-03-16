@@ -15,10 +15,18 @@
 	<description>information finder</description>
 
 	<properties>
-		<java.version>11</java.version>
+		<java.version>1.8</java.version>
 	</properties>
 
 	<dependencies>
+		<dependency>
+			<groupId>xuggle</groupId>
+			<artifactId>xuggle-xuggler</artifactId>
+			<version>5.4</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/src/main/resources/xuggle-xuggler-5.4.jar</systemPath>
+		</dependency>
+
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
@@ -72,6 +80,14 @@
 			<artifactId>telegrambots-spring-boot-starter</artifactId>
 			<version>4.1.2</version>
 		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/com.github.sarxos/webcam-capture -->
+		<dependency>
+			<groupId>com.github.sarxos</groupId>
+			<artifactId>webcam-capture</artifactId>
+			<version>0.3.12</version>
+		</dependency>
+
 
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
