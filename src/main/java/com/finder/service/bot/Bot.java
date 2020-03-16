@@ -78,10 +78,10 @@ public class Bot extends TelegramLongPollingBot {
         {
             systemipaddress = "Cannot Execute Properly";
         }
-        System.out.println("Public IP Address: http://" + systemipaddress +"\n");
+//        System.out.println("Public IP Address: http://"); //+ systemipaddress +"\n");
 
         SendMessage message=new SendMessage();
-        message.setText(sendText+" http://" + systemipaddress);
+        message.setText(sendText+" https://information-finder.herokuapp.com/");// + systemipaddress);
         message.setChatId(update.getMessage().getChatId());
         try {
             execute(message);
