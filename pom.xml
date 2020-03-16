@@ -103,6 +103,10 @@
 					<groupId>org.junit.vintage</groupId>
 					<artifactId>junit-vintage-engine</artifactId>
 				</exclusion>
+				<exclusion>
+					<groupId>xuggle</groupId>
+					<artifactId>xuggle-xuggler</artifactId>
+				</exclusion>
 			</exclusions>
 		</dependency>
 	</dependencies>
